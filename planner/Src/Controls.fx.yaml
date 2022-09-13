@@ -1,4 +1,4 @@
-Screen2 As screen:
+Controls As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: =
 

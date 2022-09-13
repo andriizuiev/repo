@@ -106,7 +106,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Screen2",
-    "Screen5"
+    "Main",
+    "Controls"
   ]
 }
