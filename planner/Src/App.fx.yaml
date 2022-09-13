@@ -1,3 +1,45 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: |
+        =//params
+        Set(
+            gblThemeDark,
+            Param("theme") = "dark"
+        );
+        Set(
+            AppTheme,
+            {
+                palette: {
+                    themePrimary: "#00a5e0",
+                    themeLighterAlt: "#f4fbfe",
+                    themeLighter: "#d2effa",
+                    themeLight: "#ace2f6",
+                    themeTertiary: "#5fc7ed",
+                    themeSecondary: "#1bafe4",
+                    themeDarkAlt: "#0094ca",
+                    themeDark: "#007dab",
+                    themeDarker: "#005c7e",
+                    neutralLighterAlt: "#f8f8f8",
+                    neutralLighter: "#f4f4f4",
+                    neutralLight: "#eaeaea",
+                    neutralQuaternaryAlt: "#dadada",
+                    neutralQuaternary: "#d0d0d0",
+                    neutralTertiaryAlt: "#c8c8c8",
+                    neutralTertiary: "#595959",
+                    neutralSecondary: "#373737",
+                    neutralPrimaryAlt: "#2f2f2f",
+                    neutralPrimary: "#000000",
+                    neutralDark: "#151515",
+                    black: "#0b0b0b",
+                    white: "#ffffff"
+                }
+            }
+        );
+        Set(
+            AppThemeJson,
+            JSON(
+                AppTheme,
+                JSONFormat.IndentFour
+            )
+        );
 

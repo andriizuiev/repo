@@ -1,0 +1,326 @@
+Screen2 As screen:
+    OnVisible: |
+        =//params
+        Set(
+            gblThemeDark,
+            Param("theme") = "dark"
+        );
+        Set(
+            AppTheme,
+            {
+                palette: {
+                    themePrimary: "#00a5e0",
+                    themeLighterAlt: "#f4fbfe",
+                    themeLighter: "#d2effa",
+                    themeLight: "#ace2f6",
+                    themeTertiary: "#5fc7ed",
+                    themeSecondary: "#1bafe4",
+                    themeDarkAlt: "#0094ca",
+                    themeDark: "#007dab",
+                    themeDarker: "#005c7e",
+                    neutralLighterAlt: "#f8f8f8",
+                    neutralLighter: "#f4f4f4",
+                    neutralLight: "#eaeaea",
+                    neutralQuaternaryAlt: "#dadada",
+                    neutralQuaternary: "#d0d0d0",
+                    neutralTertiaryAlt: "#c8c8c8",
+                    neutralTertiary: "#595959",
+                    neutralSecondary: "#373737",
+                    neutralPrimaryAlt: "#2f2f2f",
+                    neutralPrimary: "#000000",
+                    neutralDark: "#151515",
+                    black: "#0b0b0b",
+                    white: "#ffffff"
+                }
+            }
+        );
+        Set(
+            AppThemeJson,
+            JSON(
+                AppTheme,
+                JSONFormat.IndentFour
+            )
+        );
+
+    Gallery2 As gallery.BrowseLayout_Vertical_TwoTextOneImageVariant_pcfCore:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        DelayItemLoading: =true
+        FocusedBorderColor: =RGBA(98, 100, 167, 1)
+        FocusedBorderThickness: =2
+        Height: =Parent.Height
+        Items: |-
+            =Table(
+                {
+                    Name: "themePrimary "&AppTheme.palette.themePrimary,
+                    ColorValue: AppTheme.palette.themePrimary
+                },
+                {
+                    Name: "themeLighterAlt "&AppTheme.palette.themeLighterAlt,
+                    ColorValue: AppTheme.palette.themeLighterAlt
+                },
+                {
+                    Name: "themeLighter "&AppTheme.palette.themeLighter,
+                    ColorValue: AppTheme.palette.themeLighter
+                },
+                {
+                    Name: "themeLight",
+                    ColorValue: AppTheme.palette.themeLight
+                },
+                {
+                    Name: "themeTertiary",
+                    ColorValue: AppTheme.palette.themeTertiary
+                },
+                {
+                    Name: "themeSecondary",
+                    ColorValue: AppTheme.palette.themeSecondary
+                },
+                {
+                    Name: "themeDarkAlt",
+                    ColorValue: AppTheme.palette.themeDarkAlt
+                },
+                {
+                    Name: "themeDark",
+                    ColorValue: AppTheme.palette.themeDark
+                },
+                {
+                    Name: "themeDarker",
+                    ColorValue: AppTheme.palette.themeDarker
+                },
+                {
+                    Name: "neutralLighterAlt",
+                    ColorValue: AppTheme.palette.neutralLighterAlt
+                },
+                {
+                    Name: "neutralLighter",
+                    ColorValue: AppTheme.palette.neutralLighter
+                },
+                {
+                    Name: "neutralLight",
+                    ColorValue: AppTheme.palette.neutralLight
+                },
+                {
+                    Name: "neutralQuaternaryAlt",
+                    ColorValue: AppTheme.palette.neutralQuaternaryAlt
+                },
+                {
+                    Name: "neutralQuaternary",
+                    ColorValue: AppTheme.palette.neutralQuaternary
+                },
+                {
+                    Name: "neutralTertiaryAlt",
+                    ColorValue: AppTheme.palette.neutralTertiaryAlt
+                },
+                {
+                    Name: "neutralTertiary",
+                    ColorValue: AppTheme.palette.neutralTertiary
+                },
+                {
+                    Name: "neutralSecondary",
+                    ColorValue: AppTheme.palette.neutralSecondary
+                },
+                {
+                    Name: "neutralPrimaryAlt",
+                    ColorValue: AppTheme.palette.neutralPrimaryAlt
+                },
+                {
+                    Name: "neutralPrimary",
+                    ColorValue: AppTheme.palette.neutralPrimary
+                },
+                {
+                    Name: "neutralDark",
+                    ColorValue: AppTheme.palette.neutralDark
+                },
+                {
+                    Name: "black",
+                    ColorValue: AppTheme.palette.black
+                },
+                {
+                    Name: "white",
+                    ColorValue: AppTheme.palette.white
+                }
+               )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =Self.Height/CountRows(Self.AllItems)
+        Width: =500
+        X: =866
+        ZIndex: =1
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(243, 242, 241, 1)
+            DisabledFill: =RGBA(0,0,0,0)
+            Fill: =ColorValue(ThisItem.ColorValue)
+            FocusedBorderColor: =RGBA(98, 100, 167, 1)
+            Height: =Parent.TemplateHeight
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(0,0,0,0)
+            TabIndex: =0
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Label3 As Label:
+            Alignment: =Align.Center
+            Color: =RGBA(255, 191, 0, 1)
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            PCFTeamsTheme: =TeamsTheme.Default
+            Text: =ThisItem.Name
+            Width: =Parent.TemplateWidth
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+    "ComboBox1 As 'Combo box'.pcfdataset":
+        CheckedHoverOptionBackgroundFill: =
+        CheckedOptionBackgroundFill: =
+        ChevronColor: =
+        Color: =
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: =Choices(XPlanner.Category)
+        PCFTeamsTheme: =TeamsTheme.Default
+        UncheckedHoverOptionBackgroundFill: =
+        UncheckedOptionBackgroundFill: =
+        Width: =320
+        X: =40
+        Y: =84
+        ZIndex: =2
+
+        Value1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =3
+
+    Label1 As Label:
+        Color: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        DisplayMode: =DisplayMode.Edit
+        Font: ='Segoe UI'
+        FontSize: =10
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =320
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+    "TextBox1 As 'Text box'":
+        ColorText: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =320
+        X: =40
+        Y: =136
+        ZIndex: =4
+
+    Button1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        TextColor: =
+        Width: =96
+        X: =90
+        Y: =458
+        ZIndex: =5
+
+    "DatePicker1 As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =37
+        PCFTeamsTheme: =TeamsTheme.Default
+        TextColor: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        Width: =320
+        X: =40
+        Y: =188
+        ZIndex: =6
+
+    Button1_1 As Button:
+        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        TextColor: =
+        Width: =96
+        X: =214
+        Y: =458
+        ZIndex: =7
+
+    ListBox1 As listbox:
+        BorderColor: =RGBA(243, 242, 241, 1)
+        Color: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        Default: =""
+        DisabledBorderColor: =RGBA(200, 198, 196, 1)
+        DisabledColor: =RGBA(200, 198, 196, 1)
+        DisabledFill: =RGBA(243, 242, 241, 1)
+        DisabledSelectionColor: =RGBA(200, 198, 196, 1)
+        DisabledSelectionFill: =RGBA(220, 220, 220, 1)
+        Fill: =RGBA(243, 242, 241, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        HoverColor: =RGBA(37, 36, 35, 1)
+        HoverFill: =RGBA(243, 242, 241, 1)
+        Items: =Choices(XPlanner.Category)
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =ColorFade(RGBA(98, 100, 167, 1), -30%)
+        PressedFill: =RGBA(237, 235, 233, 1)
+        SelectionColor: =RGBA(37, 36, 35, 1)
+        SelectionFill: =RGBA(237, 235, 233, 1)
+        Size: =10.5
+        X: =40
+        Y: =299
+        ZIndex: =8
+
+    "Checkbox1 As 'Check box'":
+        Color: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =160
+        X: =44
+        Y: =246
+        ZIndex: =9
+
+    Toggle1 As Toggle:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        TextColor: =If(gblThemeDark,ColorValue(AppTheme.palette.white))
+        Width: =160
+        X: =208
+        Y: =249
+        ZIndex: =10
+
+    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =37
+        Items: =Choices(XPlanner.Category)
+        TemplatePadding: =0
+        TemplateSize: =100
+        Width: =500
+        X: =64
+        Y: =548
+        ZIndex: =11
+
+        Button2 As button:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            Height: =Parent.TemplateHeight-10
+            OnSelect: =Select(Parent)
+            RadiusBottomRight: =0
+            RadiusTopLeft: =30
+            RadiusTopRight: =0
+            Size: =10
+            Text: =ThisItem.Value
+            Width: =Parent.TemplateWidth-10
+            X: =Parent.TemplateWidth/2-Self.Width/2
+            Y: =Parent.TemplateHeight/2-Self.Height/2
+            ZIndex: =3
+

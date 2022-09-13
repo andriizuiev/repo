@@ -1,1 +1,28 @@
-{}
+{
+  "19eee32b-4b2e-43f1-beb4-5fc33be4beec": {
+    "connectionParameters": {
+      "sku": "Enterprise",
+      "token:TenantId": "b31e8137-b1f7-40fb-957f-649a03a68589"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://xpandsoftware.sharepoint.com/sites/XMemos": {
+        "dataSources": {
+          "XPlanner": {
+            "tableName": "0632dbd1-0183-450b-a405-8e3c6dee1405"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "XPlanner"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "19eee32b-4b2e-43f1-beb4-5fc33be4beec"
+  }
+}
