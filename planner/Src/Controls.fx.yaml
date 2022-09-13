@@ -134,6 +134,8 @@ Controls As screen:
             ZIndex: =2
 
     "ComboBox1 As 'Combo box'.pcfdataset":
+        AllowMultiSelect: =true
+        AllowSearching: =true
         CheckedHoverOptionBackgroundFill: =
         CheckedOptionBackgroundFill: =
         ChevronColor: =
