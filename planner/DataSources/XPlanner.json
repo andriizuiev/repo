@@ -41,6 +41,8 @@
       "Modified": "Modified",
       "Notes": "Notes",
       "ParentID": "ParentID",
+      "ParentRec": "ParentRec",
+      "ParentRec#Id": "ParentRec Id",
       "Priority": "Priority",
       "Priority#Id": "Priority Id",
       "Progress": "Progress",

@@ -1,5 +1,5 @@
 {
-  "19eee32b-4b2e-43f1-beb4-5fc33be4beec": {
+  "cf1a9673-1f45-4f7a-acb8-b16057121c48": {
     "connectionParameters": {
       "sku": "Enterprise",
       "token:TenantId": "b31e8137-b1f7-40fb-957f-649a03a68589"
@@ -23,6 +23,6 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "19eee32b-4b2e-43f1-beb4-5fc33be4beec"
+    "id": "cf1a9673-1f45-4f7a-acb8-b16057121c48"
   }
 }
