@@ -70,7 +70,6 @@
     "Progress_DataCard2": 183,
     "Rectangle4": 7,
     "RightSideContainer2": 72,
-    "Screen1": 3,
     "Screen2": 4,
     "Screen5": 69,
     "ScreenContainer2": 70,
@@ -96,7 +95,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/13/2022 15:28:19",
+  "HeaderLastSavedDateTimeUTC": "09/13/2022 15:39:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "cf1a9673-1f45-4f7a-acb8-b16057121c48": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/281f13b7b42f42a7a75874ac839cf7e5\""
@@ -207,7 +206,6 @@
     "Progress_DataCard2": 42,
     "Rectangle4": 2,
     "RightSideContainer2": 25,
-    "Screen1": 2,
     "Screen2": 3,
     "Screen5": 0,
     "ScreenContainer2": 17,

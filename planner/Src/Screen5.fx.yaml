@@ -87,9 +87,12 @@
             Form2 As form:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DataSource: =XPlanner
+                FillPortions: =0.9
+                Height: =Parent.Height
                 Item: =_selectedItem
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
+                NumberOfColumns: =2
                 ZIndex: =1
 
                 Title_DataCard2 As typedDataCard.textualEditCard:
@@ -104,7 +107,7 @@
                     MaxLength: =DataSourceInfo([@XPlanner], DataSourceInfo.MaxLength, "Title")
                     Required: =true
                     Update: =DataCardValue13.Text
-                    Width: =Parent.Width
+                    Width: =227
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -122,7 +125,7 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =34
                         PaddingLeft: =0
-                        Size: =13
+                        Size: =10
                         Text: =Parent.DisplayName&" v."&ThisItem.'Version number'
                         Width: =Parent.Width - 60
                         Wrap: =false
@@ -199,7 +202,7 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =DataCardKey13.Height
                         PaddingLeft: =0
-                        Size: =13
+                        Size: =10
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
@@ -219,7 +222,7 @@
                     MaxLength: =DataSourceInfo([@XPlanner], DataSourceInfo.MaxLength, "Description")
                     Required: =false
                     Update: =DataCardValue14.Text
-                    Width: =Parent.Width
+                    Width: =227
                     X: =1
                     Y: =0
                     ZIndex: =2
@@ -333,9 +336,9 @@
                     Height: =50
                     Required: =false
                     Update: =DataCardValue15.SelectedItems
-                    Width: =Parent.Width
-                    X: =2
-                    Y: =0
+                    Width: =227
+                    X: =0
+                    Y: =1
                     ZIndex: =2
 
                     DataCardKey15 As label:
@@ -451,7 +454,7 @@
                     Required: =false
                     Update: =DataCardValue16.Selected
                     Width: =227
-                    X: =0
+                    X: =1
                     Y: =1
                     ZIndex: =2
 
@@ -569,8 +572,8 @@
                     Required: =false
                     Update: =DataCardValue17.Selected
                     Width: =227
-                    X: =1
-                    Y: =1
+                    X: =0
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey17 As label:
@@ -687,8 +690,8 @@
                     Required: =false
                     Update: =DataCardValue18.SelectedDate
                     Width: =227
-                    X: =2
-                    Y: =1
+                    X: =1
+                    Y: =2
                     ZIndex: =2
 
                     DataCardKey18 As label:
@@ -796,7 +799,7 @@
                     Update: =DataCardValue19.SelectedDate
                     Width: =227
                     X: =0
-                    Y: =2
+                    Y: =3
                     ZIndex: =2
 
                     DataCardKey19 As label:
@@ -904,7 +907,7 @@
                     Update: =DataCardValue20.SelectedItems
                     Width: =227
                     X: =1
-                    Y: =2
+                    Y: =3
                     ZIndex: =2
 
                     DataCardKey20 As label:
@@ -1022,8 +1025,8 @@
                     Required: =false
                     Update: =DataCardValue21.Text
                     Width: =227
-                    X: =2
-                    Y: =2
+                    X: =0
+                    Y: =4
                     ZIndex: =2
 
                     DataCardKey21 As label:
@@ -1136,8 +1139,8 @@
                     Required: =false
                     Update: =Value(DataCardValue22.Text)
                     Width: =227
-                    X: =0
-                    Y: =3
+                    X: =1
+                    Y: =4
                     ZIndex: =2
 
                     DataCardKey22 As label:
@@ -1250,8 +1253,8 @@
                     Required: =false
                     Update: =DataCardValue23.Selected
                     Width: =227
-                    X: =1
-                    Y: =3
+                    X: =0
+                    Y: =5
                     ZIndex: =2
 
                     DataCardKey23 As label:
@@ -1368,8 +1371,8 @@
                     Required: =false
                     Update: =DataCardValue24.Attachments
                     Width: =227
-                    X: =2
-                    Y: =3
+                    X: =1
+                    Y: =5
                     ZIndex: =2
 
                     DataCardKey24 As label:
